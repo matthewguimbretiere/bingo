@@ -1,0 +1,379 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+<div id="container">
+    <div id="infoGagnant" class="flex-column justify-content-around align-items-center text-center">
+		<h1 id="titreGagnant"></h1>
+		
+		<button id="ContinuerBtn" class="bouton2 d-flex flex-row justify-content-center align-items-center trans07">Continuer</button>
+
+		<h2 style="display: none;" id="gagnantVerif">0</h2>
+	</div>
+    
+    <div class="corpsPartie2 trans05 text-center d-flex flex-column justify-content-around align-items-center">
+        <div id="hautHugo" class="d-flex flex-row justify-content-around align-items-center">
+            <div id="gaucheHugo" class="d-flex flex-column">				
+                <button id="debut" class="bouton2 d-flex flex-row justify-content-center align-items-center trans07">Commencer</button>
+            </div>
+            <div id="centreHugo" class="d-flex flex-row justify-content-around align-items-center">
+                <div id="numeros" class="d-flex flex-row justify-content-around align-items-center">
+                            
+                </div>
+                <button id="numSuivant"><i class="fas fa-caret-right"></i></button>
+            </div>
+            <div id="droiteHugo" class="d-flex flex-column justify-content-around align-items-center text-center">
+                <h1 id="nbrLigne"></h1>
+            </div>
+        </div>
+        <div id="basHugo" class="d-flex flex-row justify-content-around align-items-center w-100">
+            <div id="panneauGaucheHugo">
+                <table id="tablenumerosorti" class="text-center">
+                    <h1 class="text-center">Numéros sortis</h1>
+                    <tr>
+                        <td id="numero1" class="numerosorti">1</td>
+                        <td id="numero2" class="numerosorti">2</td>
+                        <td id="numero3" class="numerosorti">3</td>
+                        <td id="numero4" class="numerosorti">4</td>
+                        <td id="numero5" class="numerosorti">5</td>
+                        <td id="numero6" class="numerosorti">6</td>
+                        <td id="numero7" class="numerosorti">7</td>
+                        <td id="numero8" class="numerosorti">8</td>
+                        <td id="numero9" class="numerosorti">9</td>
+                        <td id="numero10" class="numerosorti">10</td>
+                    </tr>
+                    <tr>
+                        <td id="numero11" class="numerosorti">11</td>
+                        <td id="numero12" class="numerosorti">12</td>
+                        <td id="numero13" class="numerosorti">13</td>
+                        <td id="numero14" class="numerosorti">14</td>
+                        <td id="numero15" class="numerosorti">15</td>
+                        <td id="numero16" class="numerosorti">16</td>
+                        <td id="numero17" class="numerosorti">17</td>
+                        <td id="numero18" class="numerosorti">18</td>
+                        <td id="numero19" class="numerosorti">19</td>
+                        <td id="numero20" class="numerosorti">20</td>
+                    </tr>
+                    <tr>
+                        <td id="numero21" class="numerosorti">21</td>
+                        <td id="numero22" class="numerosorti">22</td>
+                        <td id="numero23" class="numerosorti">23</td>
+                        <td id="numero24" class="numerosorti">24</td>
+                        <td id="numero25" class="numerosorti">25</td>
+                        <td id="numero26" class="numerosorti">26</td>
+                        <td id="numero27" class="numerosorti">27</td>
+                        <td id="numero28" class="numerosorti">28</td>
+                        <td id="numero29" class="numerosorti">29</td>
+                        <td id="numero30" class="numerosorti">30</td>
+                    </tr>
+                    <tr>
+                        <td id="numero31" class="numerosorti">31</td>
+                        <td id="numero32" class="numerosorti">32</td>
+                        <td id="numero33" class="numerosorti">33</td>
+                        <td id="numero34" class="numerosorti">34</td>
+                        <td id="numero35" class="numerosorti">35</td>
+                        <td id="numero36" class="numerosorti">36</td>
+                        <td id="numero37" class="numerosorti">37</td>
+                        <td id="numero38" class="numerosorti">38</td>
+                        <td id="numero39" class="numerosorti">39</td>
+                        <td id="numero40" class="numerosorti">40</td>
+                    </tr>
+                    <tr>
+                        <td id="numero41" class="numerosorti">41</td>
+                        <td id="numero42" class="numerosorti">42</td>
+                        <td id="numero43" class="numerosorti">43</td>
+                        <td id="numero44" class="numerosorti">44</td>
+                        <td id="numero45" class="numerosorti">45</td>
+                        <td id="numero46" class="numerosorti">46</td>
+                        <td id="numero47" class="numerosorti">47</td>
+                        <td id="numero48" class="numerosorti">48</td>
+                        <td id="numero49" class="numerosorti">49</td>
+                        <td id="numero50" class="numerosorti">50</td>
+                    </tr>
+                    <tr>
+                        <td id="numero51" class="numerosorti">51</td>
+                        <td id="numero52" class="numerosorti">52</td>
+                        <td id="numero53" class="numerosorti">53</td>
+                        <td id="numero54" class="numerosorti">54</td>
+                        <td id="numero55" class="numerosorti">55</td>
+                        <td id="numero56" class="numerosorti">56</td>
+                        <td id="numero57" class="numerosorti">57</td>
+                        <td id="numero58" class="numerosorti">58</td>
+                        <td id="numero59" class="numerosorti">59</td>
+                        <td id="numero60" class="numerosorti">60</td>
+                    </tr>
+                    <tr>
+                        <td id="numero61" class="numerosorti">61</td>
+                        <td id="numero62" class="numerosorti">62</td>
+                        <td id="numero63" class="numerosorti">63</td>
+                        <td id="numero64" class="numerosorti">64</td>
+                        <td id="numero65" class="numerosorti">65</td>
+                        <td id="numero66" class="numerosorti">66</td>
+                        <td id="numero67" class="numerosorti">67</td>
+                        <td id="numero68" class="numerosorti">68</td>
+                        <td id="numero69" class="numerosorti">69</td>
+                        <td id="numero70" class="numerosorti">70</td>
+                    </tr>
+                    <tr>
+                        <td id="numero71" class="numerosorti">71</td>
+                        <td id="numero72" class="numerosorti">72</td>
+                        <td id="numero73" class="numerosorti">73</td>
+                        <td id="numero74" class="numerosorti">74</td>
+                        <td id="numero75" class="numerosorti">75</td>
+                        <td id="numero76" class="numerosorti">76</td>
+                        <td id="numero77" class="numerosorti">77</td>
+                        <td id="numero78" class="numerosorti">78</td>
+                        <td id="numero79" class="numerosorti">79</td>
+                        <td id="numero80" class="numerosorti">80</td>
+                    </tr>
+                    <tr>
+                        <td id="numero81" class="numerosorti">81</td>
+                        <td id="numero82" class="numerosorti">82</td>
+                        <td id="numero83" class="numerosorti">83</td>
+                        <td id="numero84" class="numerosorti">84</td>
+                        <td id="numero85" class="numerosorti">85</td>
+                        <td id="numero86" class="numerosorti">86</td>
+                        <td id="numero87" class="numerosorti">87</td>
+                        <td id="numero88" class="numerosorti">88</td>
+                        <td id="numero89" class="numerosorti">89</td>
+                        <td id="numero90" class="numerosorti">90</td>
+                    </tr>
+                    <tr>
+                        <td id="numero91" class="numerosorti">91</td>
+                        <td id="numero92" class="numerosorti">92</td>
+                        <td id="numero93" class="numerosorti">93</td>
+                        <td id="numero94" class="numerosorti">94</td>
+                        <td id="numero95" class="numerosorti">95</td>
+                        <td id="numero96" class="numerosorti">96</td>
+                        <td id="numero97" class="numerosorti">97</td>
+                        <td id="numero98" class="numerosorti">98</td>
+                        <td id="numero99" class="numerosorti">99</td>
+                        <td id="numero100" class="numerosorti">100</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="panneauCentreHugo" class="d-flex flex-column justify-content-around">
+                {% set i = 0 %}
+                {% for carton in cartons %}                
+                    {% set i = i + 1 %}
+                    <div id="tableauJoueur" class="d-flex flex-column justify-content-center align-items-center">                    
+                        <h2>{{ carton.pseudo }}</h2>
+                        <table id="carton{{ i }}" class="cartons  text-center trans05"> 
+                            <tr>
+                                <th>B</th>
+                                <th>I</th>
+                                <th>N</th>
+                                <th>G</th>
+                                <th>O</th>
+                            </tr>
+                            <tr>
+                                <td id="case1_1">{{ carton.cartonn.numB_1 }}</td>
+                                <td id="case2_1">{{ carton.cartonn.numI_1 }}</td>
+                                <td id="case3_1">{{ carton.cartonn.numN_1 }}</td>
+                                <td id="case4_1">{{ carton.cartonn.numG_1 }}</td>
+                                <td id="case5_1">{{ carton.cartonn.numO_1 }}</td>
+                            </tr>
+                            <tr>
+                                <td id="case1_2">{{ carton.cartonn.numB_2 }}</td>
+                                <td id="case2_2">{{ carton.cartonn.numI_2 }}</td>
+                                <td id="case3_2">{{ carton.cartonn.numN_2 }}</td>
+                                <td id="case4_2">{{ carton.cartonn.numG_2 }}</td>
+                                <td id="case5_2">{{ carton.cartonn.numO_2 }}</td>
+                            </tr>
+                            <tr>
+                                <td id="case1_3">{{ carton.cartonn.numB_3 }}</td>
+                                <td id="case2_3">{{ carton.cartonn.numI_3 }}</td>
+                                <td id="case3_3">{{ carton.cartonn.numN_3 }}</td>
+                                <td id="case4_3">{{ carton.cartonn.numG_3 }}</td>
+                                <td id="case5_3">{{ carton.cartonn.numO_3 }}</td>
+                            </tr>
+                            <tr>
+                                <td id="case1_4">{{ carton.cartonn.numB_4 }}</td>
+                                <td id="case2_4">{{ carton.cartonn.numI_4 }}</td>
+                                <td id="case3_4">{{ carton.cartonn.numN_4 }}</td>
+                                <td id="case4_4">{{ carton.cartonn.numG_4 }}</td>
+                                <td id="case5_4">{{ carton.cartonn.numO_4 }}</td>
+                            </tr>
+                            <tr>
+                                <td id="case1_5">{{ carton.cartonn.numB_5 }}</td>
+                                <td id="case2_5">{{ carton.cartonn.numI_5 }}</td>
+                                <td id="case3_5">{{ carton.cartonn.numN_5 }}</td>
+                                <td id="case4_5">{{ carton.cartonn.numG_5 }}</td>
+                                <td id="case5_5">{{ carton.cartonn.numO_5 }}</td>
+                            </tr>
+                        </table>
+                        <div id="quelJoueur{{ i }}">								
+                            <input type="text" hidden="hidden" id="identifiantJoueur" value="{{ carton.cartonn.joueur }}">	
+                        </div>
+                    </div>		
+                {% endfor %}
+            </div>
+            <input type="text" hidden="hidden" id="nbrCartes" value="{{ i }}">
+            <div id="panneauDroiteHugo" class="d-flex flex-column align-items-center text-center">
+                <h1>Classement</h1>
+                {% for theclassement in classement %}
+                    <p>{{ theclassement.0 }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block additional_js %}
+<script>
+
+    $('#debut').click(function(){
+		$('#gaucheHugo').append('<button class="bouton2 d-flex flex-row justify-content-center align-items-center trans07" id="ligne1">1 ligne</button>');
+		$('#gaucheHugo').append('<button class="bouton2 d-flex flex-row justify-content-center align-items-center trans07" id="ligne2">2 lignes</button>');
+	    $('#gaucheHugo').append('<button class="bouton2 d-flex flex-row justify-content-center align-items-center trans07" id="cartonP">Carton Plein</button>');
+        $('#debut').css('display','none');
+		$('#nbrLigne').html("1 ligne");
+		$('#numSuivant').css('display','flex');
+
+        //Modification du nombre de lignes
+        // Rajout d'une ligne 
+        const urlR1 = "/ligne/1 ligne";
+        fetch(urlR1)
+            .then(response => response.json());
+        // Update pour une ligne
+        $('#ligne1').click(function(){
+			$('#nbrLigne').html("1 ligne");
+            const urlU1 = "/ligne/1 ligne";
+            fetch(urlU1)
+               .then(response => response.json());
+        })
+        // Update pour  deux lignes
+        $('#ligne2').click(function(){
+			$('#nbrLigne').html("2 lignes");
+            const urlU2 = "/ligne/2 lignes";
+            fetch(urlU2)
+                .then(response => response.json());
+        })
+        // Update pour trois lignes
+        $('#cartonP').click(function(){
+			$('#nbrLigne').html("Carton Plein");
+            const urlU3 = "/ligne/cartons pleins";
+            fetch(urlU3)
+                .then(response => response.json());
+        })
+    })
+
+    var lesnumeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100];
+	var numero1=0,numero2=0,numero3=0,umero4=0,numero5=0;
+
+    $('#numSuivant').click(function(){
+		aleaNumero = Math.floor(Math.random() * (lesnumeros.length - 0) + 0);
+		var lenumero = lesnumeros[aleaNumero];
+		lesnumeros.splice(aleaNumero,1);
+
+        // Ajout du numéro dans la bdd
+        const urlNumeros = "/numeros/" + lenumero;
+        fetch(urlNumeros)
+            .then(response => response.json());
+
+		numero5 = numero4;
+		numero4 = numero3;
+		numero3 = numero2;
+		numero2 = numero1;
+		numero1 = lenumero;
+			
+		$('#numeros').html("<img src='./assets/img/boule/boule_"+numero5+".png'><img src='./assets/img/boule/boule_"+numero4+".png'><img src='./assets/img/boule/boule_"+numero3+".png'><img src='./assets/img/boule/boule_"+numero2+".png'><img src='./assets/img/boule/boule_"+numero1+".png'>");
+
+		$('#numero'+lenumero).css('background-color','#1F1F1F');
+		$('#numero'+lenumero).css('color','#CDC6C6');
+
+		for( let a = 1; a<= $('#nbrCartes').val(); a++) {
+			for(let b = 1; b<= 5; b++) {
+				if ($('#case1_'+b).html() == lenumero) {
+					$('#case1_'+b).addClass('jeton');
+
+                    // Retire d'un dans le classment d'une personne
+                    var urlJoueur = "/retrait/" + $('#quelJoueur'+a+' #identifiantJoueur').val();
+                    fetch(urlJoueur)
+                        .then(response => response.json());
+				}
+			}
+			for(let b = 1; b<= 5; b++) {
+				if ($('#case2_'+b).html() == lenumero) {
+					$('#case2_'+b).addClass('jeton');
+					// Retire d'un dans le classment d'une personne
+                    var urlJoueur = "/retrait/" + $('#quelJoueur'+a+' #identifiantJoueur').val();
+                    fetch(urlJoueur)
+                        .then(response => response.json());
+				}
+			}
+			for(let b = 1; b<= 5; b++) {
+				if ($('#case3_'+b).html() == lenumero) {
+					$('#case3_'+b).addClass('jeton');
+					// Retire d'un dans le classment d'une personne
+                    var urlJoueur = "/retrait/" + $('#quelJoueur'+a+' #identifiantJoueur').val();
+                    fetch(urlJoueur)
+                        .then(response => response.json());
+				}
+			}
+			for(let b = 1; b<= 5; b++) {
+				if ($('#case4_'+b).html() == lenumero) {
+					$('#case4_'+b).addClass('jeton');
+					// Retire d'un dans le classment d'une personne
+                    var urlJoueur = "/retrait/" + $('#quelJoueur'+a+' #identifiantJoueur').val();
+                    fetch(urlJoueur)
+                        .then(response => response.json());
+				}
+			}
+			for(let b = 1; b<= 5; b++) {
+				if ($('#case5_'+b).html() == lenumero) {
+					$('#case5_'+b).addClass('jeton');
+					// Retire d'un dans le classment d'une personne
+                    var urlJoueur = "/retrait/" + $('#quelJoueur'+a+' #identifiantJoueur').val();
+                    fetch(urlJoueur)
+                        .then(response => response.json());
+				}
+			}
+		}
+	})
+
+    setInterval(classementF,1500) ;
+	function classementF() {
+        var panneauDroiteHugo = document.getElementById('panneauDroiteHugo');
+        const urlClassement = "/load_classement";
+        fetch(urlClassement)
+            .then(response => response.json())
+            .then(datas => {
+                panneauDroiteHugo.innerHTML = `<h1>Classement</h1>` + datas.classements.map(classement => {
+                    return `<p>${classement[0]}</p>`;
+                }).join('');
+            });
+	}
+
+    // continuer partie
+    $('#ContinuerBtn').click(function(){
+		const urlContinue = "/continue";
+        fetch(urlContinue)
+            .then(response => response.json());
+	})
+
+    // Info du gagnant
+    var theinterval = setInterval(infoF,1500) ;
+	function infoF() {
+        var infoGagnant = document.getElementById('infoGagnant');
+        const urlInfosGagnant = "/load_infogagnant";
+        fetch(urlInfosGagnant)
+            .then(response => response.json())
+            .then(datas => {
+                infoGagnant.innerHTML = datas.infos;
+            });
+
+        if($('#infoGagnantExist').val() == 1) {
+            clearInterval(theinterval);
+            setTimeout(continuefctn,5000);
+            function continuefctn() {
+                console.log('ok');
+                const urlContinue = "/continue";
+                fetch(urlContinue)
+                    .then(response => response.json());
+                theinterval = setInterval(infoF,1500) ;
+            }          
+        }
+        
+	}
+</script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends '/classement/layout.html.twig' %}
+{% block title %}Add joueur{% endblock %}
+{% block content %}
+<div id="container">
+    <h2 class="mt-5 mb-5">Edition d'un joueur</h2>
+    <a href="{{ url('/classement') }}" class="btn btn-outline-primary">Classement</a>
+    <form method="post" action="{{ url('/classement/update/') ~ infoJoueur.id }}" class="mt-5">
+        <div class="form-group">
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" class="form-control" id="pseudo" name="pseudo" value={{ infoJoueur.pseudo }}>
+        </div>
+        <div class="form-group">
+            <label for="points">Points :</label>
+            <input type="number" class="form-control" id="points" name="points" value={{ infoJoueur.points }}>
+        </div>
+        <div class="form-group">
+            <label for="kills">Kills :</label>
+            <input type="number" class="form-control" id="kills" name="kills" value={{ infoJoueur.kills }}>
+        </div>
+        <div class="form-group">
+            <label for="total">Total :</label>
+            <input type="text" class="form-control" id="total" name="total" value={{ infoJoueur.total }}>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+{% endblock %}
+{% block additional_js %}
+	<script>
+
+        let pointsI = document.getElementById('points');
+        let killsI = document.getElementById('kills');
+        let totalI = document.getElementById('total');
+        pointsI.addEventListener('keyup',function() {
+            var val1 = parseInt(pointsI.value);
+            var val2 = parseInt(killsI.value);
+            var totalV = val1 + val2;
+            totalI.innerHTML = totalV;
+        })
+        killsI.addEventListener('keyup',function() {
+            var val1 = parseInt(pointsI.value);
+            var val2 = parseInt(killsI.value);
+            var totalV = val1 + val2;
+            totalI.value = totalV;
+        })
+
+		
+
+	</script>
+{% endblock %}

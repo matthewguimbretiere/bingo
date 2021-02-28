@@ -1,0 +1,209 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Choix cartons{% endblock %}
+{% block content %}
+<div id="container" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="corpsPartie d-flex flex-column justify-content-around align-items-center text-center trans05">
+        <h3 class="trans07">Choisis ta grille pour le prochain Bingo</h3>
+        <h4 style="color: red">Vous ne pourrez plus modifier votre carton après avoir cliquer sur un carton.</h4>
+        <button class="bouton2 d-flex flex-row justify-content-center align-items-center trans07">Jouer</button>
+        <div id="panneaugrille" class="d-flex flex-row justify-content-around align-items-center">
+            {% for i in 1..50 %}
+                <table id="carton{{ i }}" class="cartons text-center trans05">
+                    <tr>
+                        <th>B</th>
+                        <th>I</th>
+                        <th>N</th>
+                        <th>G</th>
+                        <th>O</th>
+                    </tr>
+                    <tr>
+						<td id="case1_1"></td>
+						<td id="case2_1"></td>
+						<td id="case3_1"></td>
+						<td id="case4_1"></td>
+						<td id="case5_1"></td>
+					</tr>
+					<tr>
+						<td id="case1_2"></td>
+						<td id="case2_2"></td>
+						<td id="case3_2"></td>
+						<td id="case4_2"></td>
+						<td id="case5_2"></td>
+					</tr>
+					<tr>
+						<td id="case1_3"></td>
+						<td id="case2_3"></td>
+						<td id="case3_3"></td>
+						<td id="case4_3"></td>
+						<td id="case5_3"></td>
+					</tr>
+					<tr>
+						<td id="case1_4"></td>
+						<td id="case2_4"></td>
+						<td id="case3_4"></td>
+						<td id="case4_4"></td>
+						<td id="case5_4"></td>
+					</tr>
+					<tr>
+						<td id="case1_5"></td>
+						<td id="case2_5"></td>
+						<td id="case3_5"></td>
+						<td id="case4_5"></td>
+						<td id="case5_5"></td>
+					</tr>
+                </table>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block additional_js %}
+	<script>
+		/*-----------Cartons-------------*/
+		var ligneB,ligneI,ligneN,ligneG,ligneO ;
+		for(let a = 1; a<51; a++) {
+			ligneB = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
+			ligneI = ["21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"];
+			ligneN = ["41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"];
+			ligneG = ["61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80"];
+			ligneO = ["81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"];
+
+			for(let b = 1; b <6; b++) {
+				aleaNumero = Math.floor(Math.random() * (ligneB.length - 0) + 0);
+				$('#carton'+a+' #case1_'+b).html(ligneB[aleaNumero]);
+				ligneB.splice(aleaNumero,1);
+			}
+			for(let b = 1; b <6; b++) {
+				aleaNumero = Math.floor(Math.random() * (ligneI.length - 0) + 0);
+				$('#carton'+a+' #case2_'+b).html(ligneI[aleaNumero]);
+				ligneI.splice(aleaNumero,1);
+			}
+			for(let b = 1; b <6; b++) {
+				aleaNumero = Math.floor(Math.random() * (ligneN.length - 0) + 0);
+				$('#carton'+a+' #case3_'+b).html(ligneN[aleaNumero]);
+				ligneN.splice(aleaNumero,1);
+			}
+			for(let b = 1; b <6; b++) {
+				aleaNumero = Math.floor(Math.random() * (ligneG.length - 0) + 0);
+				$('#carton'+a+' #case4_'+b).html(ligneG[aleaNumero]);
+				ligneG.splice(aleaNumero,1);
+			}
+			for(let b = 1; b <6; b++) {
+				aleaNumero = Math.floor(Math.random() * (ligneO.length - 0) + 0);
+				$('#carton'+a+' #case5_'+b).html(ligneO[aleaNumero]);
+				ligneO.splice(aleaNumero,1);
+			}
+
+
+			/*-------CHOISISSEMENT-------*/
+			var verif = false;
+			$('#carton'+a).click(function(){
+				if (verif == false) {
+					verif = true;
+					if (sensBtn=="droite") {
+						$('#carton'+a).css('background-color','#232323');
+						$('#carton'+a).css('color','#CDC6C6');
+						$('#carton'+a).css('border','2px solid #CDC6C6');
+						$('#carton'+a+' td').css('border','1px solid #CDC6C6');
+						$('#carton'+a+' tr').css('border','1px solid #CDC6C6');
+					} else {
+						$('#carton'+a).css('background-color','#232323');
+						$('#carton'+a).css('color','#CDC6C6');
+						$('#carton'+a).css('border','2px solid #CDC6C6');
+						$('#carton'+a+' td').css('border','1px solid #CDC6C6');
+						$('#carton'+a+' tr').css('border','1px solid #CDC6C6');
+					}
+					var numB_1 = $('#carton'+a+' #case1_1').html();
+					var numB_2 = $('#carton'+a+' #case1_2').html();
+					var numB_3 = $('#carton'+a+' #case1_3').html();
+					var numB_4 = $('#carton'+a+' #case1_4').html();
+					var numB_5 = $('#carton'+a+' #case1_5').html();
+					var numI_1 = $('#carton'+a+' #case2_1').html();
+					var numI_2 = $('#carton'+a+' #case2_2').html();
+					var numI_3 = $('#carton'+a+' #case2_3').html();
+					var numI_4 = $('#carton'+a+' #case2_4').html();
+					var numI_5 = $('#carton'+a+' #case2_5').html();
+					var numN_1 = $('#carton'+a+' #case3_1').html();
+					var numN_2 = $('#carton'+a+' #case3_2').html();
+					var numN_3 = $('#carton'+a+' #case3_3').html();
+					var numN_4 = $('#carton'+a+' #case3_4').html();
+					var numN_5 = $('#carton'+a+' #case3_5').html();
+					var numG_1 = $('#carton'+a+' #case4_1').html();
+					var numG_2 = $('#carton'+a+' #case4_2').html();
+					var numG_3 = $('#carton'+a+' #case4_3').html();
+					var numG_4 = $('#carton'+a+' #case4_4').html();
+					var numG_5 = $('#carton'+a+' #case4_5').html();
+					var numO_1 = $('#carton'+a+' #case5_1').html();
+					var numO_2 = $('#carton'+a+' #case5_2').html();
+					var numO_3 = $('#carton'+a+' #case5_3').html();
+					var numO_4 = $('#carton'+a+' #case5_4').html();
+					var numO_5 = $('#carton'+a+' #case5_5').html();
+
+					// Requête ajax
+					const url = '/choix-cartons-save';
+					let datas =	{
+								'numB_1' : numB_1,
+								'numB_2' : numB_2,
+								'numB_3' : numB_3,
+								'numB_4' : numB_4,
+								'numB_5' : numB_5,
+								'numI_1' : numI_1,
+								'numI_2' : numI_2,
+								'numI_3' : numI_3,
+								'numI_4' : numI_4,
+								'numI_5' : numI_5,
+								'numN_1' : numN_1,
+								'numN_2' : numN_2,
+								'numN_3' : numN_3,
+								'numN_4' : numN_4,
+								'numN_5' : numN_5,
+								'numG_1' : numG_1,
+								'numG_2' : numG_2,
+								'numG_3' : numG_3,
+								'numG_4' : numG_4,
+								'numG_5' : numG_5,
+								'numO_1' : numO_1,
+								'numO_2' : numO_2,
+								'numO_3' : numO_3,
+								'numO_4' : numO_4,
+								'numO_5' : numO_5,
+							};
+					const options = {
+					 	method: 'post',
+					 	headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"},
+					 	body: Object.keys(datas).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(datas[key])).join('&')
+					} 
+					fetch (url, options)
+						.then(response => response.json());
+		
+
+				} else {
+					verif = false;
+					if (sensBtn=="droite") {			
+						$('.cartons').css('background-color','#CDC6C6');
+						$('.cartons').css('color','black');
+						$('.cartons td').css('border','1px solid black');
+					} else {		
+						$('.cartons').css('background-color','#1F1F1F');
+						$('.cartons').css('color','#CDC6C6');
+						$('.cartons td').css('border','1px solid #CDC6C6');	
+					}
+					
+					const url2 = '/choix-cartons-supp';
+					fetch(url)
+						.then(response => response.json());
+				}
+
+			});
+		} 
+
+			$('.bouton2').click(function(){
+				var verif2 = false;
+				if (verif==false) {
+					alert("Veuillez sélectionner une grille");
+				} else {
+					window.location.href = "/partie";
+				}
+			})
+	</script>
+{% endblock %}

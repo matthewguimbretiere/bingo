@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Accueil{% endblock %}
+{% block content %}
+<div id="container">
+    <div class="connexion d-flex flex-column justify-content-center align-items-center">
+        <h1>Rentres ton pseudo discord</h1>
+        <form method="post" action="{{ url('/bingo-connexion') }}" class="d-flex flex-row justify-content-around align-items-center w-70">
+            <input type="text" name="pseudo" placeholder="Pseudo Discord" id="pseudo" class="champsText trans07">
+            <button class="bouton d-flex flex-row justify-content-center align-items-center trans07">Valider</button>
+        </form>
+        {% if msgErreur != "" %}
+            {{ msgErreur }}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+{% block additional_js %}
+
+{% endblock %}

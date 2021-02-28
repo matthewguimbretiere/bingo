@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://kit.fontawesome.com/4020e9bdd2.js" crossorigin="anonymous"></script>
+  <title>Bingo : {% block title %}{% endblock %}</title>
+  <link rel="icon" type="image/ico" href="{{ asset('/img/logo/icone.png') }}" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  {% block additional_css %}{% endblock %}
+  <link rel="stylesheet" href="{{ asset( '/css/app.css' ) }}">
+</head>
+
+<body class="d-flex flex-column align-items-center trans05">
+  <header class="d-flex flex-row justify-content-around align-items-center w-80">
+      <h1 id="titre" class="trans07">Bingo</h1>
+      <button id="boutonSwitch">
+        <div id="rond"> </div>
+      </button>
+  </header>
+
+  {% block content %}{% endblock %}
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  {% block additional_js %}{% endblock %}
+  <script>
+    var sensBtn = "droite";
+		$('#boutonSwitch').click(function(){
+			if (sensBtn=="droite") {
+				sensBtn = "gauche";
+				$('body').css('background-color','white');
+				$('.connexion').css('background-color','#1F1F1F');
+				$('.connexion h1').css('color','white');
+				$('.connexion h2').css('color','white');
+        		$('.corpsPartie').css('background-color','white');
+				$('.corpsPartie h1').css('color','black');
+				$('.corpsPartie h2').css('color','black');
+				$('.corpsPartie h3').css('color','black');
+				$('#titre').css('color','black');
+				$('.champsText').css('background-color','#CDC6C6');
+				$('.champsText').css('color','#232323');
+				$('.bouton').css('color','#232323');
+				$('.bouton').css('background-color','#CDC6C6');
+				$('#boutonSwitch').css('background-color','#CDC6C6');
+        		$('.cartons').css('background-color','#1F1F1F');
+				$('.cartons').css('color','#CDC6C6');
+				$('.cartons td').css('border','1px solid #CDC6C6');
+				$('.bouton2').css('color','#efe8e8');
+				$('.bouton2').css('background-color','#1F1F1F');
+				$('.corpsPartie2').css('background-color','white');
+				$('.corpsPartie2 h1').css('color','black');
+				$('.corpsPartie2 h2').css('color','black');
+				$('.corpsPartie2 h3').css('color','black');
+				$('.jeton').css('background-color','#CDC6C6');
+				$('.jeton').css('color','#1F1F1F');
+
+				if (navigator.userAgent.match(/(android|iphone|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi)) {
+					$('#rond').css('right','10.5vw');
+				} else {
+					$('#rond').css('right','2.5vw');
+				}
+			} else {
+				sensBtn = "droite";
+				$('body').css('background-color','#1F1F1F');
+				$('.connexion').css('background-color','#CDC6C6');
+				$('.connexion h1').css('color','black');	
+				$('.connexion h2').css('color','black');
+				$('#titre').css('color','white');	
+				$('.champsText').css('background-color','#1F1F1F');
+				$('.champsText').css('color','#efe8e8');
+				$('.bouton').css('color','#efe8e8');
+				$('.bouton').css('background-color','#1F1F1F');
+				$('#boutonSwitch').css('background-color','6E6A6A');
+        		$('.cartons').css('background-color','#CDC6C6');
+				$('.cartons').css('color','black');
+				$('.cartons td').css('border','1px solid black');
+				$('.bouton2').css('color','#232323');
+				$('.bouton2').css('background-color','#CDC6C6');
+        		$('.corpsPartie').css('background-color','#1F1F1F');
+				$('.corpsPartie h1').css('color','white');	
+				$('.corpsPartie h2').css('color','white');
+				$('.corpsPartie h3').css('color','white');
+				$('.corpsPartie2').css('background-color','#1F1F1F');
+				$('.corpsPartie2 h1').css('color','white');	
+				$('.corpsPartie2 h2').css('color','white');
+				$('.corpsPartie2 h3').css('color','white');
+				$('.jeton').css('background-color','#1F1F1F');
+				$('.jeton').css('color','#CDC6C6');
+
+				if (navigator.userAgent.match(/(android|iphone|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi)) {
+					$('#rond').css('right','0.5vw');
+				} else {
+					$('#rond').css('right','0vw');
+				}
+			}
+		})
+</script>
+  <script src="{{ asset( '/js/app.js' ) }}"></script>
+</body>
+
+</html>

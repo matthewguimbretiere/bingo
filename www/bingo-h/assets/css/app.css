@@ -1,0 +1,405 @@
+html {
+  font-size: 20px;
+}
+.w-10 {
+  width: 10% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+body {
+  background-color: #1f1f1f;
+  height: 90vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+h1 {
+  font-size: 2vw;
+}
+.trans05 {
+  transition: 0.5s;
+}
+.trans07 {
+  transition: 0.7s;
+}
+/*--------Header -------------------*/
+header {
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+#titre {
+  font-size: 3vw;
+  color: white;
+}
+#boutonSwitch {
+  width: 4vw;
+  height: 3vh;
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid #030202;
+  background-color: #6e6a6a;
+}
+#rond {
+  position: absolute;
+  top: 0.25vw;
+  right: 0vw;
+  width: 2vh;
+  height: 2vh;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #1f1f1f;
+  transition: 0.5s;
+}
+#boutonSwitch:hover {
+  cursor: pointer;
+}
+#boutonSwitch:hover #rond {
+  border: 1px solid #1f1f1f;
+  background-color: white;
+  right: 2.5vw;
+}
+/*--------Connexion ----------------*/
+.connexion {
+  width: 30vw;
+  height: 30vh;
+  overflow: hidden;
+  background-color: #cdc6c6;
+  border: 2px solid #030202;
+  border-radius: 20px;
+  font-size: 1vw;
+}
+.connexion h1 {
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+.champsText {
+  width: 10vw;
+  height: 3vh;
+  border-radius: 20px;
+  border: 1px solid #030202;
+  background-color: #1f1f1f;
+  color: #efe8e8;
+}
+.bouton {
+  height: 3vh;
+  border-radius: 20px;
+  width: 5vw;
+  font-size: 1vw;
+  border: 1px solid #030202;
+  background-color: #1f1f1f;
+  color: #efe8e8;
+  text-decoration: none;
+}
+.bouton:hover {
+  cursor: pointer;
+  background-color: #efe8e8;
+  color: #1f1f1f;
+}
+/*----------Choix cartons----------------*/
+.bouton2 {
+  height: 4vh;
+  margin-bottom: 1vw;
+  border-radius: 20px;
+  width: 8vw;
+  font-size: 1vw;
+  border: 1px solid #030202;
+  background-color: #efe8e8;
+  color: #1f1f1f;
+  text-decoration: none;
+}
+.bouton2:hover {
+  cursor: pointer;
+  background-color: #1f1f1f;
+  color: #efe8e8;
+}
+.corpsPartie {
+  width: 90%;
+  height: 80vh;
+  background-color: #1f1f1f;
+}
+.corpsPartie h3 {
+  color: white;
+  font-size: 1vw;
+}
+.corpsPartie h4 {
+  font-size: 1vw;
+}
+#panneaugrille {
+  width: 100%;
+  height: 80%;
+  overflow: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+.cartons {
+  border-collapse: separate;
+  border-spacing: 2px;
+  width: 20vw;
+  height: 50%;
+  border-radius: 20px;
+  background-color: #cdc6c6;
+  border: 2px solid #232323;
+  padding: 1vw;
+  margin-bottom: 1vw;
+}
+.cartons td {
+  border: 1px solid #6e6a6a;
+  padding: 1vw;
+  font-size: 1vw;
+}
+.cartons tr {
+  border: 1px solid #6e6a6a;
+  padding: 1vw;
+}
+/*--------Admin--------*/
+#hautHugo {
+  width: 80%;
+  height: 15vh;
+}
+#centreHugo {
+  width: 50vw;
+}
+#centreHugo img {
+  width: 5vw;
+  height: auto;
+}
+#numeros {
+  width: 35vw;
+}
+#numerosJ {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#numerosJ img {
+  width: 5vw;
+  height: auto;
+}
+#numSuivant {
+  background: none;
+  border: none;
+  color: #cdc6c6;
+  font-size: 3vw;
+  display: none;
+}
+#numSuivant:hover .fa-caret-right {
+  border: 1px solid #cdc6c6;
+  color: #1f1f1f;
+  cursor: pointer;
+}
+#panneauDroiteHugo h1 {
+  color: black;
+}
+#panneauDroiteHugo h2 {
+  color: black;
+  font-size: 1vw;
+}
+#panneauDroiteHugo {
+  width: 15vw;
+  height: 50vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 1vw;
+  border-radius: 25px;
+  background-color: #cdc6c6;
+}
+#tablenumerosorti {
+  width: 30%;
+  border: 1px solid #232323;
+  background-color: #cdc6c6;
+  font-size: 1vw;
+}
+#tablenumerosorti td {
+  border: 1px solid #232323;
+  padding: 0.4vw;
+}
+#panneauCentreHugo {
+  width: 50%;
+  max-height: 50vh;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+}
+.corpsPartie2 h1,
+.corpsPartie2 h2 {
+  color: white;
+}
+.corpsPartie2 {
+  width: 95vw;
+}
+#panneauDroiteHugo h1 {
+  color: black;
+}
+#panneauDroiteHugo h2 {
+  color: black;
+  font-size: 1vw;
+}
+#panneauDroiteHugo {
+  width: 15vw;
+  height: 50vh;
+  padding: 1vw;
+  border-radius: 25px;
+  background-color: #cdc6c6;
+}
+#debut {
+  display: flex;
+}
+#infoGagnant {
+  z-index: 9999;
+  background-color: #cdc6c6;
+  border: 2px solid #1f1f1f;
+  font-size: 2vw;
+  width: 60vw;
+  height: 60vh;
+  display: none;
+  color: black;
+  position: fixed;
+  padding: 5vh 5vw;
+  top: 15vh;
+  left: 15vw;
+  border-radius: 20px;
+}
+.jeton {
+  background-color: #1f1f1f;
+  color: #cdc6c6;
+  border-radius: 50%;
+}
+/*-----------Joueur----------*/
+#numerosJ {
+  width: 35vw;
+}
+#numerosJ img {
+  width: 5vw;
+  height: auto;
+}
+/*------------responsive--------*/
+@media screen and (max-width: 767px) {
+  body h1 {
+    font-size: 5vw !important;
+  }
+  #boutonSwitch {
+    width: 15vw;
+    height: 4vh;
+    top: 2vw;
+    z-index: 999;
+    right: 2vw;
+  }
+  #rond {
+    top: 1.25vw;
+    right: 0.5vw;
+    width: 4vw;
+    height: 4vw;
+  }
+  #titre {
+    font-size: 10vw;
+  }
+  #basJoueur,
+  #hautJoueur {
+    flex-direction: column !important;
+  }
+  #hautJoueur {
+    margin-top: 10vh;
+  }
+  #numerosJ img {
+    width: 15vw;
+  }
+  .connexion {
+    width: 80vw;
+    height: 30vh;
+    font-size: 3vw;
+  }
+  #panneauGaucheJoueur {
+    margin-bottom: 1vh;
+  }
+  #panneauDroiteHugo {
+    width: 80vw;
+  }
+  #panneauDroiteHugo h2 {
+    font-size: 4vw;
+  }
+  .corpsPartie2 {
+    position: absolute;
+    top: 0;
+    left: 0 !important;
+  }
+  #numerosJ {
+    width: 80vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+  #hautDroiteJoueur h2 {
+    font-size: 5vw;
+  }
+  #tablenumerosorti {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .connexion form {
+    width: 90%;
+  }
+  .champsText {
+    width: 30vw;
+    height: 3vh;
+  }
+  .bouton {
+    height: 3vh;
+    width: 15vw;
+    font-size: 3vw;
+  }
+  .bouton2 {
+    height: 7vh;
+    margin-bottom: 1vh;
+    width: 15vw;
+    font-size: 3vw;
+  }
+  .cartons {
+    width: 80vw;
+    height: 90%;
+    padding: 2vw;
+    margin-bottom: 2vw;
+  }
+  .cartons td {
+    font-size: 5vw;
+  }
+  #container h3,
+  #container h4 {
+    font-size: 4vw;
+  }
+}
